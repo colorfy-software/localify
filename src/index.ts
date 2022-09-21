@@ -132,7 +132,7 @@ export const getLocalizedString = <ContextType, KeyType, StringValuesType, Trans
   return parseStringForValues(string || fallbackString, stringValues) as unknown as TranslatedStringType
 }
 
-const Localify = {
+export default {
   /**
    * Full locale string.
    */
@@ -160,5 +160,3 @@ const Localify = {
    */
   getLocalizedString,
 }
-
-export default Localify
