@@ -113,9 +113,11 @@ export const getLocalizedString = <ContextType, KeyType, StringValuesType, Trans
 
   /* istanbul ignore next */ // NOTE: Excluding from Jest coverage as it uses the fallback language by default.
   if (!string) {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    fallbackString = (translations?.[fallback.languageTag]?.[context]?.[key] as unknown as string) ?? ''
+    fallbackString =
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      (translations?.[fallback.languageTag]?.[context]?.[key] as unknown as string) ??
+      `[missing "${languageTag}.${context}.${String(key)}" translation]`
     const translationsIsNotDefaultValue = JSON.stringify(translations) !== JSON.stringify({ en: {} })
 
     if (!fallbackString && translationsIsNotDefaultValue) {
