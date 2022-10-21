@@ -35,6 +35,8 @@ npx pod-install ios --yes
 
 ### Setup
 
+#### App
+
 ```ts
 // ./index.tsx
 
@@ -59,6 +61,15 @@ Localify.init({
 
 AppRegistry.registerComponent('main', () => App)
 
+```
+
+#### Jest
+
+```js
+// ./jest.setup.js
+// (or wherever you have your Jest config's setupFiles file)
+
+process.env.JEST = true // add this line
 ```
 
 ### With TypeScript & autocomplete
@@ -192,8 +203,8 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## 💖 Code of Conduct
 
-This library has adopted a Code of Conduct that we expect project participants to adhere to. Please read the [full text](https://github.com/colorfy-software/localify/blob/master/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+This library has adopted a Code of Conduct that we expect project participants to adhere to. Please read the [full text](https://github.com/colorfy-software/localify/blob/main/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 ## 📰 License
 
-localify is licensed under the [MIT License](https://github.com/colorfy-software/localify/blob/master/LICENSE).
+localify is licensed under the [MIT License](https://github.com/colorfy-software/localify/blob/main/LICENSE).
