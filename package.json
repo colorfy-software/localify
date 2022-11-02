@@ -4,13 +4,16 @@
   "description": "Localization for React Native made simple",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
+  "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
     "src",
     "lib",
-    "!**/__tests__"
+    "!**/example",
+    "!**/__tests__",
+    "!**/jest.setup.ts",
+    "!**/jest.setup.d.ts"
   ],
   "scripts": {
     "lint": "eslint \"**/*.{js,ts,tsx}\" --fix",
