@@ -121,7 +121,7 @@ export const getLocalizedString = <ContextType, KeyType, StringValuesType, Trans
     const translationsIsNotDefaultValue = JSON.stringify(translations) !== JSON.stringify({ en: {} })
 
     if (!fallbackString && translationsIsNotDefaultValue) {
-      throw new Error(`[missing "${languageTag}.${context}.${String(key)}" translation]`)
+      console.error(`[missing "${languageTag}.${context}.${String(key)}" translation]`)
     }
   }
 
