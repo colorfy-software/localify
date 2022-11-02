@@ -117,6 +117,9 @@ export const getLocalizedString = <ContextType, KeyType, StringValuesType, Trans
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       (translations?.[fallback.languageTag]?.[context]?.[key] as unknown as string) ??
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      (translations?.[fallback.languageTag]?.default?.[context]?.[key] as unknown as string) ??
       `[missing "${languageTag}.${context}.${String(key)}" translation]`
     const translationsIsNotDefaultValue = JSON.stringify(translations) !== JSON.stringify({ en: {} })
 
