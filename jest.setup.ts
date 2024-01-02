@@ -1,6 +1,6 @@
 process.env.JEST = 'true'
 
-jest.mock('react-native-localize', () => require('react-native-localize/mock.js'))
+jest.mock('react-native-localize', () => require('react-native-localize/mock'))
 jest.mock('i18n-js', () => {
   class I18nMock {
     store = () => jest.fn()

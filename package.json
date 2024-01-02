@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "i18n-js": "^4.1.1",
-    "react-native-localize": "^2.2.3"
+    "react-native-localize": "^3.0.4"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",

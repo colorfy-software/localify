@@ -71,7 +71,7 @@ export const initLocalify = <
   const language = process.env.JEST
     ? { languageTag: 'en' }
     : /* istanbul ignore next */ // NOTE: Excluding native module from Jest coverage.
-      RNLocalize.findBestAvailableLanguage(Object.keys(i18n.translations)) || fallback
+      RNLocalize.findBestLanguageTag(Object.keys(i18n.translations)) || fallback
 
   languageTag = language.languageTag
   i18n.locale = language.languageTag
