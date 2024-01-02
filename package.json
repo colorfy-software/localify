@@ -1,6 +1,6 @@
 {
   "name": "@colorfy-software/localify",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Localization for React Native made simple",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
